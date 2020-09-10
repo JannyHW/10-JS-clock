@@ -1,3 +1,5 @@
+let twoDigits = (num) => (num < 10 ? "0" + num : num); // exress FN need to write before usiing it
+
 function currentTime() {
   let date = new Date();
   let hour = date.getHours();
@@ -9,9 +11,9 @@ function currentTime() {
   min = twoDigits(min);
   sec = twoDigits(sec);
 
-document.querySelector("#clock").innerHTML = `${hour} : ${min} : ${sec}`;
+  document.querySelector("#clock").innerHTML = `${hour} : ${min} : ${sec}`;
 }
 
-let twoDigits = num => (num < 10 ? "0" + num : num);
+currentTime(); // need this line to have clock load immedately before next 1 sec from the next line
 
-let time = setInterval(currentTime, 1000);
+const time = setInterval(currentTime, 1000);
